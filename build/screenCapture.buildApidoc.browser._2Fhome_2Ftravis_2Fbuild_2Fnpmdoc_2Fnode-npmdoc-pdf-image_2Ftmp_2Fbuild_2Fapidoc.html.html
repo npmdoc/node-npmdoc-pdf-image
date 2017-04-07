@@ -1,0 +1,646 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/mooz/node-pdf-image#readme">pdf-image (v1.1.0)</a>
+</h1>
+<h4>Provides an interface to convert PDF's pages to png files in Node.js by using ImageMagick.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pdf-image">module pdf-image</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pdf-image.PDFImage">
+            function <span class="apidocSignatureSpan">pdf-image.</span>PDFImage
+            <span class="apidocSignatureSpan">(pdfFilePath, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pdf-image.</span>PDFImage.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pdf-image.PDFImage">module pdf-image.PDFImage</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pdf-image.PDFImage.PDFImage">
+            function <span class="apidocSignatureSpan">pdf-image.</span>PDFImage
+            <span class="apidocSignatureSpan">(pdfFilePath, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pdf-image.PDFImage.prototype">module pdf-image.PDFImage.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pdf-image.PDFImage.prototype.constructConvertCommandForPage">
+            function <span class="apidocSignatureSpan">pdf-image.PDFImage.prototype.</span>constructConvertCommandForPage
+            <span class="apidocSignatureSpan">(pageNumber)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pdf-image.PDFImage.prototype.constructConvertOptions">
+            function <span class="apidocSignatureSpan">pdf-image.PDFImage.prototype.</span>constructConvertOptions
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pdf-image.PDFImage.prototype.constructGetInfoCommand">
+            function <span class="apidocSignatureSpan">pdf-image.PDFImage.prototype.</span>constructGetInfoCommand
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pdf-image.PDFImage.prototype.convertPage">
+            function <span class="apidocSignatureSpan">pdf-image.PDFImage.prototype.</span>convertPage
+            <span class="apidocSignatureSpan">(pageNumber)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pdf-image.PDFImage.prototype.getInfo">
+            function <span class="apidocSignatureSpan">pdf-image.PDFImage.prototype.</span>getInfo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pdf-image.PDFImage.prototype.getOutputImagePathForPage">
+            function <span class="apidocSignatureSpan">pdf-image.PDFImage.prototype.</span>getOutputImagePathForPage
+            <span class="apidocSignatureSpan">(pageNumber)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pdf-image.PDFImage.prototype.numberOfPages">
+            function <span class="apidocSignatureSpan">pdf-image.PDFImage.prototype.</span>numberOfPages
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pdf-image.PDFImage.prototype.parseGetInfoCommandOutput">
+            function <span class="apidocSignatureSpan">pdf-image.PDFImage.prototype.</span>parseGetInfoCommandOutput
+            <span class="apidocSignatureSpan">(output)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pdf-image.PDFImage.prototype.setConvertExtension">
+            function <span class="apidocSignatureSpan">pdf-image.PDFImage.prototype.</span>setConvertExtension
+            <span class="apidocSignatureSpan">(convertExtension)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pdf-image.PDFImage.prototype.setConvertOptions">
+            function <span class="apidocSignatureSpan">pdf-image.PDFImage.prototype.</span>setConvertOptions
+            <span class="apidocSignatureSpan">(convertOptions)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pdf-image" id="apidoc.module.pdf-image">module pdf-image</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pdf-image.PDFImage" id="apidoc.element.pdf-image.PDFImage">
+        function <span class="apidocSignatureSpan">pdf-image.</span>PDFImage
+        <span class="apidocSignatureSpan">(pdfFilePath, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PDFImage(pdfFilePath, options) {
+  if (!options) options = {};
+
+  this.pdfFilePath = pdfFilePath;
+  this.pdfFileBaseName = path.basename(pdfFilePath, ".pdf");
+
+  this.setConvertOptions(options.convertOptions);
+  this.setConvertExtension(options.convertExtension);
+  this.useGM = options.graphicsMagick || false;
+
+  this.outputDirectory = options.outputDirectory || path.dirname(pdfFilePath);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pdf-image.PDFImage" id="apidoc.module.pdf-image.PDFImage">module pdf-image.PDFImage</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pdf-image.PDFImage.PDFImage" id="apidoc.element.pdf-image.PDFImage.PDFImage">
+        function <span class="apidocSignatureSpan">pdf-image.</span>PDFImage
+        <span class="apidocSignatureSpan">(pdfFilePath, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PDFImage(pdfFilePath, options) {
+  if (!options) options = {};
+
+  this.pdfFilePath = pdfFilePath;
+  this.pdfFileBaseName = path.basename(pdfFilePath, ".pdf");
+
+  this.setConvertOptions(options.convertOptions);
+  this.setConvertExtension(options.convertExtension);
+  this.useGM = options.graphicsMagick || false;
+
+  this.outputDirectory = options.outputDirectory || path.dirname(pdfFilePath);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pdf-image.PDFImage.prototype" id="apidoc.module.pdf-image.PDFImage.prototype">module pdf-image.PDFImage.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pdf-image.PDFImage.prototype.constructConvertCommandForPage" id="apidoc.element.pdf-image.PDFImage.prototype.constructConvertCommandForPage">
+        function <span class="apidocSignatureSpan">pdf-image.PDFImage.prototype.</span>constructConvertCommandForPage
+        <span class="apidocSignatureSpan">(pageNumber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">constructConvertCommandForPage = function (pageNumber) {
+  var pdfFilePath = this.pdfFilePath;
+  var outputImagePath = this.getOutputImagePathForPage(pageNumber);
+  var convertOptionsString = this.constructConvertOptions();
+  return util.format(
+    "%s %s'%s[%d]' '%s'",
+    this.useGM ? "gm convert" : "convert",
+    convertOptionsString ? convertOptionsString + " " : "",
+    pdfFilePath, pageNumber, outputImagePath
+  );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return optionName;
+  }
+}, this).join(" ");
+  },
+  convertPage: function (pageNumber) {
+var pdfFilePath     = this.pdfFilePath;
+var outputImagePath = this.getOutputImagePathForPage(pageNumber);
+var convertCommand  = this.<span class="apidocCodeKeywordSpan">constructConvertCommandForPage</span>(pageNumber);
+
+var promise = new Promise(function (resolve, reject) {
+  function convertPageToImage() {
+    exec(convertCommand, function (err, stdout, stderr) {
+      if (err) {
+        return reject({
+          message: "Failed to convert page to image",
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pdf-image.PDFImage.prototype.constructConvertOptions" id="apidoc.element.pdf-image.PDFImage.prototype.constructConvertOptions">
+        function <span class="apidocSignatureSpan">pdf-image.PDFImage.prototype.</span>constructConvertOptions
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">constructConvertOptions = function () {
+  return Object.keys(this.convertOptions).sort().map(function (optionName) {
+    if (this.convertOptions[optionName] !== null) {
+      return optionName + " " + this.convertOptions[optionName];
+    } else {
+      return optionName;
+    }
+  }, this).join(" ");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+},
+setConvertExtension: function (convertExtension) {
+  this.convertExtension = convertExtension || "png";
+},
+constructConvertCommandForPage: function (pageNumber) {
+  var pdfFilePath = this.pdfFilePath;
+  var outputImagePath = this.getOutputImagePathForPage(pageNumber);
+  var convertOptionsString = this.<span class="apidocCodeKeywordSpan">constructConvertOptions</span>();
+  return util.format(
+    "%s %s'%s[%d]' '%s'",
+    this.useGM ? "gm convert" : "convert",
+    convertOptionsString ? convertOptionsString + " " : "",
+    pdfFilePath, pageNumber, outputImagePath
+  );
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pdf-image.PDFImage.prototype.constructGetInfoCommand" id="apidoc.element.pdf-image.PDFImage.prototype.constructGetInfoCommand">
+        function <span class="apidocSignatureSpan">pdf-image.PDFImage.prototype.</span>constructGetInfoCommand
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">constructGetInfoCommand = function () {
+  return util.format(
+    "pdfinfo '%s'",
+    this.pdfFilePath
+  );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      info[RegExp.$1] = RegExp.$2;
+    }
+  });
+  return info;
+},
+getInfo: function () {
+  var self = this;
+  var getInfoCommand = this.<span class="apidocCodeKeywordSpan">constructGetInfoCommand</span>();
+  var promise = new Promise(function (resolve, reject) {
+    exec(getInfoCommand, function (err, stdout, stderr) {
+      if (err) {
+        return reject({
+          message: "Failed to get PDF'S information",
+          error: err,
+          stdout: stdout,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pdf-image.PDFImage.prototype.convertPage" id="apidoc.element.pdf-image.PDFImage.prototype.convertPage">
+        function <span class="apidocSignatureSpan">pdf-image.PDFImage.prototype.</span>convertPage
+        <span class="apidocSignatureSpan">(pageNumber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">convertPage = function (pageNumber) {
+  var pdfFilePath     = this.pdfFilePath;
+  var outputImagePath = this.getOutputImagePathForPage(pageNumber);
+  var convertCommand  = this.constructConvertCommandForPage(pageNumber);
+
+  var promise = new Promise(function (resolve, reject) {
+    function convertPageToImage() {
+      exec(convertCommand, function (err, stdout, stderr) {
+        if (err) {
+          return reject({
+            message: "Failed to convert page to image",
+            error: err,
+            stdout: stdout,
+            stderr: stderr
+          });
+        }
+        return resolve(outputImagePath);
+      });
+    }
+
+    fs.stat(outputImagePath, function (err, imageFileStat) {
+      var imageNotExists = err &amp;&amp; err.code === "ENOENT";
+      if (!imageNotExists &amp;&amp; err) {
+        return reject({
+          message: "Failed to stat image file",
+          error: err
+        });
+      }
+
+      // convert when (1) image doesn't exits or (2) image exists
+      // but its timestamp is older than pdf's one
+
+      if (imageNotExists) {
+        // (1)
+        convertPageToImage();
+        return;
+      }
+
+      // image exist. check timestamp.
+      fs.stat(pdfFilePath, function (err, pdfFileStat) {
+        if (err) {
+          return reject({
+            message: "Failed to stat PDF file",
+            error: err
+          });
+        }
+
+        if (imageFileStat.mtime &lt; pdfFileStat.mtime) {
+          // (2)
+          convertPageToImage();
+          return;
+        }
+
+        return resolve(outputImagePath);
+      });
+    });
+  });
+  return promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+## Usage
+
+```javascript
+var PDFImage = require("pdf-image").PDFImage;
+
+var pdfImage = new PDFImage("/tmp/slide.pdf");
+pdfImage.<span class="apidocCodeKeywordSpan">convertPage</span>(0).then(function (imagePath) {
+  // 0-th page (first page) of the slide.pdf is available as slide-0.png
+  fs.existsSync("/tmp/slide-0.png") // =&gt; true
+});
+```
+
+## Express
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pdf-image.PDFImage.prototype.getInfo" id="apidoc.element.pdf-image.PDFImage.prototype.getInfo">
+        function <span class="apidocSignatureSpan">pdf-image.PDFImage.prototype.</span>getInfo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getInfo = function () {
+  var self = this;
+  var getInfoCommand = this.constructGetInfoCommand();
+  var promise = new Promise(function (resolve, reject) {
+    exec(getInfoCommand, function (err, stdout, stderr) {
+      if (err) {
+        return reject({
+          message: "Failed to get PDF'S information",
+          error: err,
+          stdout: stdout,
+          stderr: stderr
+        });
+      }
+      return resolve(self.parseGetInfoCommandOutput(stdout));
+    });
+  });
+  return promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      }
+      return resolve(self.parseGetInfoCommandOutput(stdout));
+    });
+  });
+  return promise;
+},
+numberOfPages: function () {
+  return this.<span class="apidocCodeKeywordSpan">getInfo</span>().then(function (info) {
+    return info["Pages"];
+  });
+},
+getOutputImagePathForPage: function (pageNumber) {
+  return path.join(
+    this.outputDirectory,
+    this.pdfFileBaseName + "-" + pageNumber + "." + this.convertExtension
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pdf-image.PDFImage.prototype.getOutputImagePathForPage" id="apidoc.element.pdf-image.PDFImage.prototype.getOutputImagePathForPage">
+        function <span class="apidocSignatureSpan">pdf-image.PDFImage.prototype.</span>getOutputImagePathForPage
+        <span class="apidocSignatureSpan">(pageNumber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOutputImagePathForPage = function (pageNumber) {
+  return path.join(
+    this.outputDirectory,
+    this.pdfFileBaseName + "-" + pageNumber + "." + this.convertExtension
+  );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  this.convertOptions = convertOptions || {};
+},
+setConvertExtension: function (convertExtension) {
+  this.convertExtension = convertExtension || "png";
+},
+constructConvertCommandForPage: function (pageNumber) {
+  var pdfFilePath = this.pdfFilePath;
+  var outputImagePath = this.<span class="apidocCodeKeywordSpan">getOutputImagePathForPage</span>(pageNumber);
+  var convertOptionsString = this.constructConvertOptions();
+  return util.format(
+    "%s %s'%s[%d]' '%s'",
+    this.useGM ? "gm convert" : "convert",
+    convertOptionsString ? convertOptionsString + " " : "",
+    pdfFilePath, pageNumber, outputImagePath
+  );
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pdf-image.PDFImage.prototype.numberOfPages" id="apidoc.element.pdf-image.PDFImage.prototype.numberOfPages">
+        function <span class="apidocSignatureSpan">pdf-image.PDFImage.prototype.</span>numberOfPages
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">numberOfPages = function () {
+  return this.getInfo().then(function (info) {
+    return info["Pages"];
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pdf-image.PDFImage.prototype.parseGetInfoCommandOutput" id="apidoc.element.pdf-image.PDFImage.prototype.parseGetInfoCommandOutput">
+        function <span class="apidocSignatureSpan">pdf-image.PDFImage.prototype.</span>parseGetInfoCommandOutput
+        <span class="apidocSignatureSpan">(output)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parseGetInfoCommandOutput = function (output) {
+  var info = {};
+  output.split("\n").forEach(function (line) {
+    if (line.match(/^(.*?):[ \t]*(.*)$/)) {
+      info[RegExp.$1] = RegExp.$2;
+    }
+  });
+  return info;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        return reject({
+          message: "Failed to get PDF'S information",
+          error: err,
+          stdout: stdout,
+          stderr: stderr
+        });
+      }
+      return resolve(self.<span class="apidocCodeKeywordSpan">parseGetInfoCommandOutput</span>(stdout));
+    });
+  });
+  return promise;
+},
+numberOfPages: function () {
+  return this.getInfo().then(function (info) {
+    return info["Pages"];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pdf-image.PDFImage.prototype.setConvertExtension" id="apidoc.element.pdf-image.PDFImage.prototype.setConvertExtension">
+        function <span class="apidocSignatureSpan">pdf-image.PDFImage.prototype.</span>setConvertExtension
+        <span class="apidocSignatureSpan">(convertExtension)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setConvertExtension = function (convertExtension) {
+  this.convertExtension = convertExtension || "png";
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function PDFImage(pdfFilePath, options) {
+if (!options) options = {};
+
+this.pdfFilePath = pdfFilePath;
+this.pdfFileBaseName = path.basename(pdfFilePath, ".pdf");
+
+this.setConvertOptions(options.convertOptions);
+this.<span class="apidocCodeKeywordSpan">setConvertExtension</span>(options.convertExtension);
+this.useGM = options.graphicsMagick || false;
+
+this.outputDirectory = options.outputDirectory || path.dirname(pdfFilePath);
+}
+
+PDFImage.prototype = {
+constructGetInfoCommand: function () {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pdf-image.PDFImage.prototype.setConvertOptions" id="apidoc.element.pdf-image.PDFImage.prototype.setConvertOptions">
+        function <span class="apidocSignatureSpan">pdf-image.PDFImage.prototype.</span>setConvertOptions
+        <span class="apidocSignatureSpan">(convertOptions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setConvertOptions = function (convertOptions) {
+  this.convertOptions = convertOptions || {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function PDFImage(pdfFilePath, options) {
+  if (!options) options = {};
+
+  this.pdfFilePath = pdfFilePath;
+  this.pdfFileBaseName = path.basename(pdfFilePath, ".pdf");
+
+  this.<span class="apidocCodeKeywordSpan">setConvertOptions</span>(options.convertOptions);
+  this.setConvertExtension(options.convertExtension);
+  this.useGM = options.graphicsMagick || false;
+
+  this.outputDirectory = options.outputDirectory || path.dirname(pdfFilePath);
+}
+
+PDFImage.prototype = {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
